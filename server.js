@@ -1,10 +1,11 @@
 const express = require('express')
 const path = require('path')
 const app = express()
-const port = 5000
+const port =process.env.PORT ||  5000;
 const pathname=path.join(__dirname + "/public")
 const mongoose= require('mongoose')
-mongoose.connect('mongodb://localhost:27017/lms');
+MongoDbURL="mongodb+srv://lms:rupin@cluster0.jbvdn.mongodb.net/lms";
+mongoose.connect(MongoDbURL);
 var db=mongoose.connection;
 let loged=false;
 db.on('error',console.error.bind(console,"Connection error : "))
