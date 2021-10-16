@@ -4,7 +4,7 @@ const app = express()
 const port =process.env.PORT ||  5000;
 const pathname=path.join(__dirname + "/public")
 const mongoose= require('mongoose')
-MongoDbURL="mongodb+srv://lms:rupin@cluster0.jbvdn.mongodb.net/lms";
+MongoDbURL="";
 mongoose.connect(MongoDbURL);
 var db=mongoose.connection;
 let loged=false;
